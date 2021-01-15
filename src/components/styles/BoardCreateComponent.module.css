@@ -1,0 +1,22 @@
+.boardCreateComponent {
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.bcc_newBoardButton {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+    height: 70px;
+    width: 250px;
+    background: #349334;
+    color: #ffffff;
+    border: 1px solid black;
+    box-shadow: 10px 10px 10px #a09f9f;
+}
+
+.bcc_newBoardButton:focus {
+    box-shadow: 10px 10px 10px grey;
+    outline: 1px solid black;
+}

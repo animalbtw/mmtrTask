@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from 'react';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
+
+import st from './components/styles/App.module.css'
+
+import Header from "./components/header/Header";
+import BoardCreateComponent from "./components/boards/boardCreateComp/BoardCreateComponent";
+import BoardsTable from "./components/boards/boardsTable/BoardsTable";
+import BoardContent from "./components/boards/boardsTable/boardContent/BoardContent";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [actualBord, setActualBord] = React.useState([{}])
+    return (
+        <BrowserRouter>
+            <div className={st.App}>
+                <Header/>
+                <Switch>
+                    <Route exact path='/boards'>
+                        <div className={st.app_boardContent}>
+                            <BoardCreateComponent/>
+                            <BoardsTable
+                                setActualBord={setActualBord}/>
+                        </div>
+                    </Route>
+                    <Route
+                        exact
+                        path='/boards/my_board'>
+                        <BoardContent actualBoard={actualBord}/>
+                    </Route>
+                </Switch>
+            </div>
+        </BrowserRouter>
+    );
 }
 
 export default App;

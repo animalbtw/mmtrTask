@@ -1,0 +1,20 @@
+.board {
+
+}
+
+.board_selector {
+    min-width: 250px;
+    min-height: 50px;
+    background: #fff;
+    outline: none;
+    border: 1px solid grey;
+    transition: .2s linear;
+}
+
+.board_selector:hover {
+    background: #c0ffc5;
+}
+
+.board_selector:focus {
+    border: 1px solid black;
+}

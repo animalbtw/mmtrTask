@@ -1,0 +1,9 @@
+.App {
+
+}
+
+.app_boardContent {
+    display: flex;
+    flex-direction: row;
+    /*justify-content: space-around;*/
+}

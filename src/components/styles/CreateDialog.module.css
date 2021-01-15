@@ -1,0 +1,22 @@
+.createDialog {
+    display: flex;
+    border: 1px solid black;
+    width: 250px;
+    height: 200px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.createDialog_inputField {
+    min-height: 20px;
+}
+
+.createDialog_actions {
+    margin-top: 10vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+.createDialog_actions_button {
+    padding: 5px;
+}

@@ -1,0 +1,16 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 12vh;
+    border-bottom: 1px solid lightgrey;
+}
+
+.header__link {
+
+}
+
+.header__smile {
+    height: 10vh;
+}
